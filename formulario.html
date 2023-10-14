@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Angel Ponce Sanchez">
+    <meta name="description" content="formulario de datos personales">
+    <title>formulario</title>
+    <style>
+        td {
+            border-style: groove;
+        }
+
+        body,
+        table {
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Formulario Profesional</h1>
+            <img width="500" src="./img/profesionales.png" alt="profesionales">
+        </div>
+
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="2">
+                        <h2>Rellene el formulario</h2>
+                    </td>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label>Nombre</label></td>
+                    <td><input name="nombre" type="nombre" placeholder="Su Nombre" minlength="3" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td><label>Apellidos</label></td>
+                    <td><input name="nombre" type="nombre" placeholder="Apellidos" minlength="3" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha de Nacimiento</label></td>
+                    <td><input name="date" type="date" min="1923-01-01" max="20020-01-01"></td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input name="email" type="email" placeholder="Dirección de Correo"></td>
+                </tr>
+                <tr>
+                    <form action="#">
+                    <td><label>nacionalidad</label></td>
+                    <td><select name="email" type="email" placeholder="Dirección de Correo">
+                        <option>España</option>
+                        <option>Francia</option>
+                        <option>Alemania</option>
+                        <option>Rusia</option>
+                        <option>Portugal</option>
+                        <option>Italia</option>
+                        <option>Irlanda</option>
+                        <option>Reino Unido</option>
+                        <option>Andorra</option>
+                        <option>Austria</option>
+                    </select></td>
+                        
+                    </form>
+                    </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
