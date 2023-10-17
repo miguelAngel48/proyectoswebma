@@ -14,10 +14,10 @@
         }
 
         input {
-            box-sizing: border-box;
+            box-sizing: border-box; 
         }
 
-        #datos,#seleccione-nacionalidad {
+        .datos,#seleccione-nacionalidad {
             box-sizing: border-box;
             width: 100%;
             padding: 10px;
@@ -54,32 +54,33 @@
 
             </thead>
             <tbody>
+                <form action="#" method="GET">
                 <tr>
                     <td><label><b>Nombre</b></label></td>
-                    <td ><input id="datos" name="nombre" type="nombre" placeholder="Su Nombre" minlength="3"
+                    <td ><input class="datos" name="nombre" type="nombre" placeholder="Su Nombre" minlength="3"
                             maxlength="20"></td>
                 </tr>
                 <tr>
                     <td><label><b>Apellidos</b></label></td>
-                    <td><input id="datos" name="nombre" type="nombre" placeholder="Apellidos" minlength="3" maxlength="20"></td>
+                    <td><input class="datos" name="nombre" type="nombre" placeholder="Apellidos" minlength="3" maxlength="20"></td>
                 </tr>
                 <tr>
                     <td><label><b>Contraseña</b></label></td>
-                    <td><input id="datos" name="password" type="password" minlength="6" placeholder="mínimo 6 caracteres"></td>
+                    <td><input class="datos" name="password" type="password" minlength="6" placeholder="mínimo 6 caracteres" required></td>
                 </tr>
                 <tr>
                     <td><label><b>Fecha de Nacimiento</b></label></td>
-                    <td><input id="datos" name="date" type="date" min="1923-01-01" max="20020-01-01"></td>
+                    <td><input class="datos" name="date" type="date" min="1923-01-01" max="20020-01-01"></td>
                 </tr>
                 <tr>
                     <td><label><b>Email</b></label></td>
-                    <td><input id="datos" name="email" type="email" placeholder="Dirección de Correo"></td>
+                    <td><input class="datos" name="email" type="email" placeholder="Dirección de Correo" required></td>
                 </tr>
                 <tr>
-                    <form action="#">
+                    
                         <td><label><b>nacionalidad</b></label></td>
                         <td><select id="seleccione-nacionalidad" name="nacionalidad">
-                                <option value="">--Seleccione Nacionalidad--</option>
+                                <option value="">--Selecciona Nacionalidad--</option>
                                 <option value="españa">España</option>
                                 <option value="francia">Francia</option>
                                 <option value="alemania">Alemania</option>
@@ -92,11 +93,12 @@
                                 <option value="austria">Austria</option>
                             </select></td>
                 <tr>
-                    <td><input id="datos"  name="Enviar" type="submit"></td>
-                    <td><input id="datos" name="reset" type="reset"></td>
+                    <td><input class="datos"  name="Enviar" type="submit"></td>
+                    <td><input class="datos" name="reset" type="reset"></td>
                 </tr>
-                </form>
+                
                 </tr>
+            </form>
             </tbody>
             <tfoot>
 
