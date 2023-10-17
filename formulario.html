@@ -10,12 +10,26 @@
     <style>
         td {
             border-style: groove;
+            height: px;
+        }
+
+        input {
+            box-sizing: border-box;
+        }
+
+        #datos,#seleccione-nacionalidad {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin: 0%;
+
         }
 
         body,
         table {
             width: 500px;
             margin: 0 auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -41,39 +55,48 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><label>Nombre</label></td>
-                    <td><input name="nombre" type="nombre" placeholder="Su Nombre" minlength="3" maxlength="20"></td>
+                    <td><label><b>Nombre</b></label></td>
+                    <td ><input id="datos" name="nombre" type="nombre" placeholder="Su Nombre" minlength="3"
+                            maxlength="20"></td>
                 </tr>
                 <tr>
-                    <td><label>Apellidos</label></td>
-                    <td><input name="nombre" type="nombre" placeholder="Apellidos" minlength="3" maxlength="20"></td>
+                    <td><label><b>Apellidos</b></label></td>
+                    <td><input id="datos" name="nombre" type="nombre" placeholder="Apellidos" minlength="3" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <td><label>Fecha de Nacimiento</label></td>
-                    <td><input name="date" type="date" min="1923-01-01" max="20020-01-01"></td>
+                    <td><label><b>Contraseña</b></label></td>
+                    <td><input id="datos" name="password" type="password" minlength="6" placeholder="mínimo 6 caracteres"></td>
                 </tr>
                 <tr>
-                    <td><label>Email</label></td>
-                    <td><input name="email" type="email" placeholder="Dirección de Correo"></td>
+                    <td><label><b>Fecha de Nacimiento</b></label></td>
+                    <td><input id="datos" name="date" type="date" min="1923-01-01" max="20020-01-01"></td>
+                </tr>
+                <tr>
+                    <td><label><b>Email</b></label></td>
+                    <td><input id="datos" name="email" type="email" placeholder="Dirección de Correo"></td>
                 </tr>
                 <tr>
                     <form action="#">
-                    <td><label>nacionalidad</label></td>
-                    <td><select name="email" type="email" placeholder="Dirección de Correo">
-                        <option>España</option>
-                        <option>Francia</option>
-                        <option>Alemania</option>
-                        <option>Rusia</option>
-                        <option>Portugal</option>
-                        <option>Italia</option>
-                        <option>Irlanda</option>
-                        <option>Reino Unido</option>
-                        <option>Andorra</option>
-                        <option>Austria</option>
-                    </select></td>
-                        
-                    </form>
-                    </tr>
+                        <td><label><b>nacionalidad</b></label></td>
+                        <td><select id="seleccione-nacionalidad" name="nacionalidad">
+                                <option value="">--Seleccione Nacionalidad--</option>
+                                <option value="españa">España</option>
+                                <option value="francia">Francia</option>
+                                <option value="alemania">Alemania</option>
+                                <option value="russia">Rusia</option>
+                                <option value="portugal">Portugal</option>
+                                <option value="italia">Italia</option>
+                                <option value="irlanda">Irlanda</option>
+                                <option value="reinounido">Reino Unido</option>
+                                <option value="andorra">Andorra</option>
+                                <option value="austria">Austria</option>
+                            </select></td>
+                <tr>
+                    <td><input id="datos"  name="Enviar" type="submit"></td>
+                    <td><input id="datos" name="reset" type="reset"></td>
+                </tr>
+                </form>
+                </tr>
             </tbody>
             <tfoot>
 
