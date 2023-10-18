@@ -1,0 +1,56 @@
+
+td {
+    border-style: groove;
+    border-width: 3px;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+input {
+    box-sizing: border-box; 
+}
+
+.datos,#seleccione-nacionalidad {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 0%;
+
+}
+img{
+    width: 400px;
+}
+
+body,
+table {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+   background:linear-gradient(0deg, rgba(245, 244, 244, 0.973) 0%, rgba(199, 199, 199, 0.938) 26%, rgba(196, 196, 196, 0.801) 63%, rgba(252, 252, 252, 0.781) 100%);
+    
+}
+    
+#tabla {
+    background:linear-gradient(90deg, rgba(148,147,147,0.48503151260504207) 0%, rgba(214,222,218,1) 52%, rgba(142,145,145,1) 100%); 
+}
+footer li {
+    
+    padding: 2%;
+    list-style: none;
+    display: inline;
+    
+    
+}
+footer div {
+    margin-top: 15%;
+    text-align: center;
+    background:linear-gradient(90deg, rgba(148,147,147,0.48503151260504207) 0%, rgba(214,222,218,1) 52%, rgba(142,145,145,1) 100%);
+    border-style: groove;
+    border-width: 3px;
+    background-color: rgba(0, 0, 0, 0.12);
+    display: grid;
+    place-items:center;
+    font-weight: bolder;
+    padding: 2%;
+}
+
+    
