@@ -32,7 +32,7 @@ table {
 #tabla {
     background:linear-gradient(90deg, rgba(148,147,147,0.48503151260504207) 0%, rgba(214,222,218,1) 52%, rgba(142,145,145,1) 100%); 
 }
-footer li {
+footer ul {
     
     padding: 2%;
     list-style: none;
@@ -40,7 +40,7 @@ footer li {
     
     
 }
-footer div {
+footer nav {
     margin-top: 15%;
     text-align: center;
     background:linear-gradient(90deg, rgba(148,147,147,0.48503151260504207) 0%, rgba(214,222,218,1) 52%, rgba(142,145,145,1) 100%);
@@ -50,7 +50,7 @@ footer div {
     display: grid;
     place-items:center;
     font-weight: bolder;
-    padding: 2%;
+    
 }
 
     
