@@ -4,82 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Miguel Angel Ponce Sanchez">
+    <meta name="author" content="Miguel Angel Ponce Sanchez"><!--metatags con información básica de la página. -->
     <meta name="description" content="formulario de datos personales">
-    <title>formulario</title>
-    <style>
-        td {
-            border-style: groove;
-            height: px;
-        }
+    <link rel="stylesheet" href="/css/style.css">
+    <title>formulario Profesional</title>
 
-        input {
-            box-sizing: border-box; 
-        }
-
-        .datos,#seleccione-nacionalidad {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            margin: 0%;
-
-        }
-
-        body,
-        table {
-            width: 500px;
-            margin: 0 auto;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <div>
             <h1>Formulario Profesional</h1>
-            <img width="500" src="./img/profesionales.png" alt="profesionales">
+            <hr>
+            <img src="./img/profesionales.png" alt="profesionales">
         </div>
 
     </header>
-    <main>
-        <table>
+    <main> <!--main que contiene el groso del contenido del formulario-->
+        <table id="tabla">
             <thead>
                 <tr>
                     <td colspan="2">
-                        <h2>Rellene el formulario</h2>
+                        <h2>Rellena el formulario</h2>
                     </td>
 
                 </tr>
 
             </thead>
             <tbody>
-                <form action="#" method="GET">
-                <tr>
-                    <td><label><b>Nombre</b></label></td>
-                    <td ><input class="datos" name="nombre" type="nombre" placeholder="Su Nombre" minlength="3"
-                            maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td><label><b>Apellidos</b></label></td>
-                    <td><input class="datos" name="nombre" type="nombre" placeholder="Apellidos" minlength="3" maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td><label><b>Contraseña</b></label></td>
-                    <td><input class="datos" name="password" type="password" minlength="6" placeholder="mínimo 6 caracteres" required></td>
-                </tr>
-                <tr>
-                    <td><label><b>Fecha de Nacimiento</b></label></td>
-                    <td><input class="datos" name="date" type="date" min="1923-01-01" max="20020-01-01"></td>
-                </tr>
-                <tr>
-                    <td><label><b>Email</b></label></td>
-                    <td><input class="datos" name="email" type="email" placeholder="Dirección de Correo" required></td>
-                </tr>
-                <tr>
-                    
+                <form action="#" method="GET"> <!--metodo get para enviar el formulario al servidor -->
+                    <tr>
+                        <td><label for="nombre"><b>Nombre</b></label></td>
+                        <td><input class="datos" name="nombre" type="text" placeholder="Su Nombre" minlength="3"
+                                maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td><label><b>Apellidos</b></label></td>
+                        <td><input class="datos" name="apellidos" type="text" placeholder="Apellidos" minlength="3"
+                                maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td><label><b>Contraseña</b></label></td>
+                        <td><input class="datos" name="password" type="password" minlength="6"
+                                placeholder="mínimo 6 caracteres" required></td>
+                    </tr>
+                    <tr>
+                        <td><label><b>Fecha de Nacimiento</b></label></td>
+                        <td><input class="datos" name="date" type="date" min="1923-01-01" max="2020-01-01"></td>
+                    </tr>
+                    <tr>
+                        <td><label><b>Email</b></label></td>
+                        <td><input class="datos" name="email" type="email" placeholder="Dirección de Correo" required>
+                        </td>
+                    </tr>
+                    <tr>
+
                         <td><label><b>nacionalidad</b></label></td>
                         <td><select id="seleccione-nacionalidad" name="nacionalidad">
+                                <!--etiqueta select para la especificar la  nacionalidad*-->
                                 <option value="">--Selecciona Nacionalidad--</option>
                                 <option value="españa">España</option>
                                 <option value="francia">Francia</option>
@@ -92,22 +74,55 @@
                                 <option value="andorra">Andorra</option>
                                 <option value="austria">Austria</option>
                             </select></td>
-                <tr>
-                    <td><input class="datos"  name="Enviar" type="submit"></td>
-                    <td><input class="datos" name="reset" type="reset"></td>
+                 </tr>
+                 <tr>
+                    <td> <!--inputs formato radio para la seleccionar un estado-->
+                        <label class="datos">Estado civil</label>
+                    </td>
+                    <td>
+                        <input name="radio" type="radio" value="soltero">
+                        <label>soltero/a</label>
+                        <input name="radio" type="radio" value="casado">
+                        <label>casado/a</label>
+                        <input name="radio" type="radio" value="viudo">
+                        <label>viudo/a</label>
+                    </td>
                 </tr>
-                
-                </tr>
-            </form>
+
+                    <tr>
+                        <!--los inputs para enviar o resetear la información-->
+                        <td><input class="datos" name="reset" type="reset"></td>
+                        <td><input class="datos" name="Enviar" type="submit" value="submit"></td>
+                    </tr>
+                   
+                    </tr>
+                </form>
             </tbody>
             <tfoot>
+                <tr>
+                    <td colspan="2"><!--El apartado de términos y condiciones-->
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox"><strong> <a href="/terminos-y-condiciones.html" target="_blank" required>he leído y
+                                    acepto los términos y condiciones</a></strong></label>
+                    </td>
+
+                </tr>
 
             </tfoot>
         </table>
 
     </main>
     <footer>
-
+        <div>
+        <lu>
+            <li>tlf:666545454</li>
+            <li>correogenerico@gmail.com</li>
+            <li>Github:miguelAngel48</li>
+            <li> <button><a href="index.html">volver atras</a></button></li>
+        </lu>
+       
+           
+        </div>
     </footer>
 
 </body>
