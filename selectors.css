@@ -1,0 +1,113 @@
+*::selection {
+color: rgb(114, 205, 233);
+
+}
+ul{
+    margin: 0;
+    padding: 0;   
+    padding-left: 4vw;
+    
+}
+
+p {
+    text-align: justify;
+
+}
+a {
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: rgb(0, 0, 255);
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+ div:nth-child(1) {
+    float: left;
+    width: 40%;
+}
+
+div:nth-child(2) {
+    float: right;
+    width: 40%;
+    }
+    article{
+        clear: both;
+    }
+
+div {
+    background-color: rgba(238, 131, 30, 0.514);
+}
+  p.lorem::first-letter {
+    font-size: xx-large;
+    color: #8a188a;;
+}
+h1 + h4, h2 + h4, h3 + h4 {
+    margin-top: 0;
+    padding-top: 0;
+} 
+
+h1, h2, h3, h4 {
+    text-align: center;
+    clear: both;
+}
+
+nav li {
+    background-color: rgb(150, 233, 102);
+    float: left;
+    width: 32%;
+    height: 40px;
+    text-align: center;
+    list-style-type: none;
+    margin-right: 10px;
+    display: inline;
+    
+    
+    
+}
+
+table, th, td {
+    margin: 0 auto;
+    border: 1px solid rgb(5, 5, 5);
+}
+th {
+    background-color: silver;
+}
+
+td:nth-child(odd) {
+background-color: #f8f4ca;
+
+}
+
+tr:nth-child(4) td, tr:nth-child(7) td{
+    text-align: center;
+    background-color: rgb(240, 191, 245);
+}
+tfoot{
+    background-color: #cadef8;
+}
+
+tr:hover td{
+    background-color: #3f8aec;
+}
+footer ul {
+    background-color:rgba(238, 131, 30, 0.514);
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 3vh;
+    display: inline-block;
+}
+footer li {
+float: left;
+width:50% ;
+padding: 2vh 0;
+margin: 0;
+}
+
+
