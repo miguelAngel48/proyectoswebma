@@ -93,3 +93,18 @@ tfoot{
 tr:hover td{
     background-color: #3f8aec;
 }
+footer ul {
+    background-color:rgba(238, 131, 30, 0.514);
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 3vh;
+    display: inline-block;
+}
+footer li {
+float: left;
+width:50% ;
+padding: 2vh 0;
+margin: 0;
+}
