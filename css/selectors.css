@@ -78,7 +78,7 @@ th {
     background-color: silver;
 }
 
-td:nth-child(odd) {
+tr:nth-child(odd) {
 background-color: #f8f4ca;
 
 }
