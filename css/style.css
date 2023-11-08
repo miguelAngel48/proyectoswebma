@@ -32,7 +32,7 @@ table {
 #tabla {
     background:linear-gradient(90deg, rgba(148,147,147,0.48503151260504207) 0%, rgba(214,222,218,1) 52%, rgba(142,145,145,1) 100%); 
 }
-footer ul {
+footer li {
     
     padding: 2%;
     list-style: none;
@@ -40,9 +40,8 @@ footer ul {
     
     
 }
-footer nav {
+footer div {
     margin-top: 15%;
-    margin-bottom: 3vw;
     text-align: center;
     background:linear-gradient(90deg, rgba(148,147,147,0.48503151260504207) 0%, rgba(214,222,218,1) 52%, rgba(142,145,145,1) 100%);
     border-style: groove;
@@ -51,7 +50,7 @@ footer nav {
     display: grid;
     place-items:center;
     font-weight: bolder;
-    
+    padding: 2%;
 }
 
     

@@ -1,0 +1,9 @@
+nav {
+    background-color: blue;
+    margin: 0%;
+    display: block;
+    justify-content: center;
+    float: left;
+    width: 25%;
+    text-decoration: none;
+}
