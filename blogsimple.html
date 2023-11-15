@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miguel Angel Ponce Sanchez">
     <link rel="stylesheet" href="./css/blogsimple.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./img/person-circle-outline.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell&display=swap" rel="stylesheet">
     <title>Blog Simple</title>
     <script src="https://kit.fontawesome.com/e9d5e49eee.js" crossorigin="anonymous"></script>
 </head>
@@ -13,19 +17,19 @@
 <body>
     <header>
         <nav >
-                <a href="./index.html" class="navegador">Inicio</a>
-                <a href="" class="navegador">Tienda</a>
-                <a href="#galeria" class="navegador">Galeria</a>
-                <a href="#piepagina" class="navegador">Contacto</a>        
+                <a href="./index.html" class="navegador"> <i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="https://www.banggood.com/" class="navegador" target="_blank"><i class="fa-solid fa-store"></i> Tienda</a>
+                <a href="#Galeria" class="navegador"><i class="fa-regular fa-images"></i> Galeria</a>
+                <a href="#piepagina" class="navegador"><i class="fa-solid fa-address-card"></i> Contacto</a> 
         </nav>
     </header>
-    <div id="banner"><h1>Hamburgueseria Kentruki</h1></div>
+    <div id="banner"><h1>Blog Personal</h1></div>
     <main>                
                   
 
                         <article>
-                            <h3>Primer artículo</h3>
-                            <h2>17 de Noviembre 2023</h2>
+                            <h3 class="enunciado">Primer artículo</h3>
+                            <h2 class="fecha">17 de Noviembre 2023</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, culpa voluptatum non,
                                 reiciendis
                                 nihil, autem voluptatem minus numquam iusto exercitationem ex? Obcaecati consequatur
@@ -53,11 +57,12 @@
                                 fuga quasi assumenda unde.
                             </p>
                         </article>
-                    
+                        
+                        <div class="divider"></div>
                                 
                         <article>
-                            <h3>Segundo artículo articulo</h3>
-                            <h2 >17 de Noviembre 2023</h2>
+                            <h3 class="enunciado">Segundo artículo articulo</h3>
+                            <h2 class="fecha">17 de Noviembre 2023</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, culpa voluptatum non,
                                 reiciendis
                                 nihil, autem voluptatem minus numquam iusto exercitationem ex? Obcaecati consequatur
@@ -85,22 +90,24 @@
                                 fuga quasi assumenda unde.
                             </p>
                         </article>
-                            
-                        <h3 id="Galeria">Galeria</h3>
-                        <h2>17 de Noviembre 2023</h2>
-                       <a href="./img/galeria/img/Image01.jpg" target="_blank"><img src="./img/galeria/img/Image01.jpg" alt=""></a>
-                       <a href="./img/galeria/img/Image02.jpg" target="_blank"> <img src="./img/galeria/img/Image02.jpg" alt=""></a>
-                       <a href="./img/galeria/img/Image03.jpg" target="_blank"> <img src="./img/galeria/img/Image03.jpg" alt=""></a>
-                       <a href="./img/galeria/img/Image04.jpg" target="_blank"> <img src="./img/galeria/img/Image04.jpg" alt=""></a>
-                       <a href="./img/galeria/img/Image05.jpg" target="_blank"> <img src="./img/galeria/img/Image05.jpg" alt=""></a>
-                       <a href="./img/galeria/img/Image06.jpg" target="_blank"> <img src="./img/galeria/img/Image06.jpg" alt=""></a>
+                        <div class="divider"></div>
+                         <article id="Galeria">   
+                        <h3 class="enunciado"><i class="fa-regular fa-image"></i> Galeria</h3>
+                        <h2 class="fecha">17 de Noviembre 2023</h2>
+                       <a href="./img/img/Image01.jpg" target="_blank"> <img src="./img/img/Image01_red.jpg" alt=""></a>
+                       <a href="./img/img/Image02.jpg" target="_blank"> <img src="./img/img/Image02_red.jpg" alt=""></a>
+                       <a href="./img/img/Image03.jpg" target="_blank"> <img src="./img/img/Image03_red.jpg" alt=""></a>
+                       <a href="./img/img/Image04.jpg" target="_blank"> <img src="./img/img/Image04_red.jpg" alt=""></a>
+                       <a href="./img/img/Image05.jpg" target="_blank"> <img src="./img/img/Image05_red.jpg" alt=""></a>
+                       <a href="./img/img/Image06.jpg" target="_blank"> <img src="./img/img/Image06_red.jpg" alt=""></a>
+                         </article>
     </main>
-    <footer id="piepagina">
-        <ul>
-            <li>Miguel Angel Ponce Sanchez</li>
-           
-            <li> <i class="fa-brands fa-github"></i></li>
-        </ul>
+    <footer>
+        <div id="piepagina">
+             <p>Miguel Angel Ponce Sanchez</p> 
+
+            <p id="perfilgithub"><a href="https://github.com/miguelAngel48" target="_blank"> <i class="fa-brands fa-github"></i> miguelAngel48</a></p>
+        </div>
     </footer>
 </body>
 
