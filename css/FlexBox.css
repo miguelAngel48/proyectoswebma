@@ -1,0 +1,41 @@
+*{
+    color: #fff;
+}
+
+body {    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url(/img/wallpaperPurple.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    background-attachment: fixed;
+   
+}
+main {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    
+    padding: 8px 22px;
+    border-radius: 6px;
+    background-color: #621ac0;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-color: #621ac0;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+button:active {
+    transform: scale(0.96);
+}
