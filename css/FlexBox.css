@@ -1,41 +1,78 @@
 *{
     color: #fff;
+    text-shadow: 0.2rem 0.2rem #00000069;
 }
 
 body {    
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
+    width: 100vw;
+    height: 100vh;
     background-image: url(/img/wallpaperPurple.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(20px);
+    justify-content:center;
+    align-items: center;
     background-attachment: fixed;
-   
+    backdrop-filter: blur(20px);
 }
-main {
-    flex-wrap: nowrap;
-    flex-direction: row;
+#titulo {
+    display: flex;
+    margin: 5rem;
     justify-content: center;
     align-items: center;
 }
+#planes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.Paneles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    height: 80%;
+    width: 20%;
+    border:#621ac0 4px solid;
+    border-radius: 20px;
+    box-shadow: 0 4px 45px rgba(0, 0, 0, 0.5);
 
 button {
-    
-    padding: 8px 22px;
+    margin: 0.4rem;
+    padding: 0.7rem 1.8rem;
     border-radius: 6px;
     background-color: #621ac0;
     transition: all 0.2s ease;
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     border-color: #621ac0;
+    box-sizing:content-box;
+    width: 50px;
+
+
 }
 button:hover{
     transform: translateY(-5px);
 }
 button:active {
     transform: scale(0.96);
+}
+
+footer > a {
+    text-decoration: none;
 }
