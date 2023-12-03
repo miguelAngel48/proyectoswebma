@@ -132,10 +132,13 @@ footer > a {
 
 @media only screen and (max-width: 768px) {
     body {
-        width: 100%;
+        width: 100vw;
+        margin: auto;
         height: auto;
         flex-direction: column;
         backdrop-filter: none;
+        overflow-x: hidden;
+        
     }
     main {
         flex-direction: column;
