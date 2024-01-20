@@ -25,14 +25,24 @@ main {
 }
 
 .texto{
-    color: gray;
+    color: rgb(31, 31, 31);
     display: flex;
     font-size: 30px;
     text-align: center;
-    width: 60%;
-    padding-top: 30vh;
-    margin: auto; 
+    width: 75%;
+    padding: 3vh 8vw;
+    margin: 12vh auto; 
     justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0 5px 24px rgba(0, 0, 0, 0.5);
+    background-color: rgba(73, 73, 73, 0.091);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     
 }
 
+@media only screen and (max-width: 1000px) {
+    .foto {
+        display: none;
+    }
+}
