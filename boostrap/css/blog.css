@@ -11,7 +11,7 @@ main {
 } 
 .foto {
     margin-top: 60px;
-    background-image: url(../imagenes/Rascacielo\ DJI.jpg);
+    background-image: url(./imagenes/Rascacielo\ DJI.jpg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
