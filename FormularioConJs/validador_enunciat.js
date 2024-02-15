@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-
+const nom = document.querySelector("nom");
 
 const usuaris = ["daniel.82", "manuel-223", "darknight_1", "mrNum.1234", "user77", "fairyGoth"];
 
@@ -37,10 +37,27 @@ form.onsubmit = function (event) {
 form.onreset = () =>{}
 
 /* Attach events oninput*/
+nom.oninput = validaNom;
 
 
+/*funcion de validación*/
+function validaNom(){
+   if(nomvalue.length > 24){
+     msgError = "No tiene que ser superior a 24 carácteres";
+   }
+   
+};
 
+function soloLetras(texto){
+   var valida = /^[A-Za-zÁ-]+$/.test(texto);
+   if (valida){
+    return "";
+   }
 
+   return "Solo se pueden letras"
+}
+
+setValidity(nom,msgError);
 /* CAPTCHA */
 var generaCaptcha = function(){
 
