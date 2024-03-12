@@ -14,7 +14,6 @@ const listaNombres = document.querySelector('#listaNombres');
 const eliminar = document.querySelector('#eliminar');
 
 /* Attach events oninput*/
-
 nom.oninput = () => { validaNom(24, 2, nom, "nombre"); }
 llin1.oninput = () => { validaNom(24, 2, llin1, "primer apellido"); }
 llin2.oninput = () => { validaNom(24, 2, llin2, "segundo apellido"); }
@@ -26,9 +25,6 @@ pais.oninput = () => { validaPais(); }
 dataNaix.oninput = () => { validaEdad(dataNaix); }
 dni.oninput = () => { validadni(dni); }
 cp.oninput = () => { validaCP(cp); }
-
-
-
 
 /* Funció que marca els inputs com a vàlids/invàlids*/
 function setValidity(element, msgError) {
@@ -42,7 +38,7 @@ function setValidity(element, msgError) {
     }
 
     element.setCustomValidity(msgError);
-    document.querySelector(`#error-${element.id}`).innerHTML = msgError;
+    document.querySelector(`#error-${element.id}`).textContent = msgError;
 }
 
 form.onsubmit = function (event) {
@@ -59,7 +55,7 @@ form.onsubmit = function (event) {
     }
 
     form.classList.add('was-validated');
-
+    
 };
 
 form.onreset = () => {
@@ -69,10 +65,6 @@ form.onreset = () => {
     });
 
 }
-
-
-
-
 /*funcion de validación*/
 function validaNom(max, min, texto, campo) {
     let msgError = "";
@@ -85,7 +77,6 @@ function validaNom(max, min, texto, campo) {
     setValidity(texto, msgError);
 
 }
-
 function validaUsuari(max, min, texto, campo) {
     let msgError = "";
     const longitud = texto.value.length;
@@ -197,41 +188,8 @@ function validaCP(texto) {
     setValidity(texto, msgError);
 }
 
-/* funciones para Localstorage */
-
-
-
-/* CAPTCHA */
-
-
-function generaCaptcha() {
-    let num1 = Math.round(Math.random() * 10);
-    let num2 = Math.round(Math.random() * 10);
-    let num3 = Math.round(Math.random());
-    let operacio = num3 ? "-" : "+";
-
-    if (num1 > num2) {
-        captcha.textContent = `${num1}${operacio}${num2}`;
-    } else {
-        captcha.textContent = `${num2}${operacio}${num1}`;
-    }
-}
-generaCaptcha();
-
-function validaCaptcha() {
-    let respuesta = document.querySelector("#captcha").value;
-    let respuestaCorrecta = eval(document.querySelector("#label-captcha").textContent);
-
-    if (respuesta == respuestaCorrecta) {
-        setValidity(captcha, "correcto");
-    } else {
-        setValidity(captcha, "error");
-    }
-}
-
-/*
-function AlmacenarDatos() {
-
+form.onsubmit = function (event) {
+    event.preventDefault();
     let objetosRecuperados = obteArraySessionStorage("datosElegidos");
 
     const nuevoObjeto = creaObjeto();
@@ -252,7 +210,7 @@ function AlmacenarDatos() {
 
         actualizaSelect(objetosRecuperados);
 
-        this.reset();
+       
     }
 
 }
@@ -262,7 +220,7 @@ function actualizaSelect(objetos) {
 
     let resultado = "";
     for (const objeto of objetos) {
-        resultado += `<option value="${objeto.usuari}">${objeto.nom} (Edad: ${objeto.edadCliente})</option>`;
+        resultado += `<option value="${objeto.usuari}">${objeto.nombre} (Edad: ${objeto.dataNaix})</option>`;
     }
 
     listaNombres.innerHTML = resultado;
@@ -297,9 +255,9 @@ listaNombres.onchange = function () {
     }
 
     if (objetoEncontrado) {
-        nom.value = objetoEncontrado.nom;
-        llin1.value = objetoEncontrado.llin1;
-        llin2.value = objetoEncontrado.llin2;
+        nom.value = objetoEncontrado.nombre;
+        llin1.value = objetoEncontrado.primerApellido;
+        llin2.value = objetoEncontrado.segundoApellido;
         usuari.value = objetoEncontrado.usuari;
         pais.value = objetoEncontrado.pais;
         password.value = objetoEncontrado.password;
@@ -327,4 +285,35 @@ function obteArraySessionStorage(param) {
     }
 
     return objetosRecuperados;
-} */
+}
+
+
+
+
+
+/* CAPTCHA */
+var generaCaptcha = function(){
+
+    let num1 = Math.round(Math.random() * 10);
+    let num2 = Math.round(Math.random() * 10);
+    let num3 = Math.round(Math.random());
+    let operacio = num3 ? "-" : "+";
+
+    if (num1 > num2) {
+        captcha.textContent = `${num1}${operacio}${num2}`;
+    } else {
+        captcha.textContent = `${num2}${operacio}${num1}`;
+    }
+}
+generaCaptcha();
+
+function validaCaptcha() {
+    let respuesta = document.querySelector("#captcha").value;
+    let respuestaCorrecta = eval(document.querySelector("#label-captcha").textContent);
+
+    if (respuesta == respuestaCorrecta) {
+        setValidity(captcha, "correcto");
+    } else {
+        setValidity(captcha, "error");
+    }
+}
