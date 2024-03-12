@@ -12,28 +12,32 @@
 
 <body>
     <nav id="navegador">
-        <label for="query"> Busqueda:<input type="text" name="query" id="query"></label>
-        <input type="button" value="busqueda" id="busqueda">
-        <input type="button" value="aleatorio" id="aleatorio">
-        <label for="cantidadImagenes">Cantidad de Imágenes:</label>
-        <select id="cantidadImagenes">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <label for="formatoImagen">Formato de la imagen:</label>
-        <select id="formatoImagen">
-            <option value="landscape">Horizontal</option>
-            <option value="squarish">Cuadrado</option>
-            <option value="portrait">Vertical</option>
-        </select>
+        <div class="marcadores">
+            <label for="query"> Búsqueda:<input type="text" name="query" id="query" placeholder="Escribe aquí"></label>
+            <input type="button" value="buscar" id="busqueda" class="btn">
+            <input type="button" value="aleatorio" id="aleatorio" class="btn">
+        </div>
+        <div class="marcadores">
+            <label for="cantidadImagenes">Cantidad de Imágenes:</label>
+            <select id="cantidadImagenes">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="formatoImagen">Formato de la imagen:</label>
+            <select id="formatoImagen">
+                <option value="landscape">Horizontal</option>
+                <option value="squarish">Cuadrado</option>
+                <option value="portrait">Vertical</option>
+            </select>
+        </div>
     </nav>
     <br>
 

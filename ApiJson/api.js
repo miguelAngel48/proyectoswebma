@@ -19,7 +19,7 @@ let mostrartipus = consulta.value;
 
 //función para llamar a la API y seleccionar imagenes específicas
 function carga() {
-
+   
     fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&query=${consulta.value}&client_id=${codigo}`)
         .then(response => { return response.json(); })
 
@@ -41,7 +41,7 @@ function carga() {
                                                 <p>&#128337; : ${fechaCreacion.toDateString()}</p>
                                                 <p>&#128064; : ${statsData.views.total}</p>
                                                 <p>	&#128233; : ${statsData.downloads.total}</p>
-                                                <p>&#129505; : ${statsData.likes.total}</p>
+                                                <p>&#129505; : ${result.likes}</p>
                                                 <a href="${result.urls.full}" target="_blank">
                                                  <button class="abrirImagen"> Abrir Imagen </button> </a>
                                               </div>
