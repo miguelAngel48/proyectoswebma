@@ -20,30 +20,28 @@ let mostrartipus = consulta.value;
 //función para llamar a la API y seleccionar imagenes específicas
 function carga() {
    
-    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&order_by=${ordenar.value}&color=${color.value}&query=${consulta.value}&client_id=${codigo}`)
+    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&order_by=${ordenar.value}${color.value}&query=${consulta.value}&client_id=${codigo}`)
         .then(response => { return response.json(); })
 
 
         .then(data => {
             data.results.forEach(result => {
                 imagenesCargadas.push(result);
-
-                // Hacer una solicitud separada para obtener estadísticas de la imagen
                 fetch(`https://api.unsplash.com/photos/${result.id}/statistics?client_id=${codigo}`)
                     .then(statsResponse => statsResponse.json())
                     .then(statsData => {
                         let fechaCreacion = new Date(result.created_at);
-                        main.innerHTML += `<div class="card w-25 col-4 m-auto">
+                        main.innerHTML += `<div class="card col-xl-3 col-lg-4 col-md-6 mb-4">
                                             
                                                 <img src="${result.urls.small}" alt="${result.description}">
                                               <div class="card__content">
-                                                <p>&#x1f642; : ${result.user.name}</p>
-                                                <p>&#128337; : ${fechaCreacion.toDateString()}</p>
-                                                <p>&#128064; : ${statsData.views.total}</p>
-                                                <p>	&#128233; : ${statsData.downloads.total}</p>
-                                                <p>&#129505; : ${result.likes}</p>
+                                                <p>&#x1f642;  ${result.user.name}</p>
+                                                <p>&#128337;  ${fechaCreacion.toDateString()}</p>
+                                                <p>&#128064;  ${statsData.views.total}</p>
+                                                <p>	&#128233;  ${statsData.downloads.total}</p>
+                                                <p>&#129505;  ${result.likes}</p>
                                                 <a href="${result.urls.full}" target="_blank">
-                                                 <button class="abrirImagen"> Abrir Imagen </button> </a>
+                                                 <button id="abrirImagen"> Abrir Imagen </button> </a>
                                               </div>
                                             </div>`;
                     })
@@ -51,8 +49,9 @@ function carga() {
             });
         })
         .catch(error => console.error('Error al cargar las imágenes:', error));
+        if(!consulta.value.length == "" ){
     mostrarMas.style.display = "block";
-
+}
 
 }
 
@@ -73,26 +72,24 @@ function cargaFotoAleatoria() {
         .then(data => {
             data.forEach(result => {
                 imagenesCargadas.push(result);
-                main.innerHTML += `<div class="image-container">
-                <a href="${result.urls.full}" target="_blank" class="col w-25 h-50 m-3">
+                main.innerHTML += `<div class="card col-xl-3 col-lg-4 col-md-6 mb-4">
                   <img src="${result.urls.small}" alt="${result.description}">
-                </a>
-                <div class="image-metadata">
-                  <p>Descripción: ${result.description}</p>
-                  <p>Autor: ${result.user.name}</p>
-                  <p>Fecha de Creación: ${result.created_at}</p>
-                  <p>Dimensiones: ${result.width} x ${result.height}</p>
-                  <p>Color Principal: ${result.color}</p>
-                  <p>Descargas: ${result.downloads}</p>
-                  <p>Vistas: ${result.views}</p>
-                  <p>Me gusta: ${result.likes}</p>
+                <div class="card__content">
+                  <p>&#x1f642; ${result.user.name}</p>
+                  <p>&#128337; ${result.created_at}</p>
+                  <p>&#128233; ${result.downloads}</p>
+                  <p>&#128064; ${result.views}</p>
+                  <p>&#129505; ${result.likes}</p>
+                  <a href="${result.urls.full}" target="_blank">
+                  <button id="abrirImagen"> Abrir Imagen </button> </a>
+                    </div>
                 </div>
               </div>`;
             });
         })
         .catch(error => console.error('Error al cargar las imágenes aleatorias:', error));
-    mostrarMas.style.display = "block";
 
+            mostrarMas.style.display = "block";       
 }
 
 //Funcionalidad al boton Mostrar mas.
@@ -104,4 +101,3 @@ mostrarMas.addEventListener("click", () => {
     } else cargaFotoAleatoria();
 
 })
-console.log(consulta.value);
