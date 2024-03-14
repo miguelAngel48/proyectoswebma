@@ -59,8 +59,11 @@
 }
 
 .marcadores {
-    margin: 0 10px;
+    margin: 10px 50px;
+    
 }
+
+
 
 #query {
     margin: 15px;
@@ -95,7 +98,9 @@
     font-weight: bolder;
     color: black;
 }
-
+img{
+    width: 100%;
+}
 .card:hover {
     border: 1px solid black;
     transform: scale(1.05);

@@ -17,7 +17,12 @@
             <input type="button" value="buscar" id="busqueda" class="btn">
             <input type="button" value="aleatorio" id="aleatorio" class="btn">
         </div>
-        <div class="marcadores">
+        <div class="marcadores" id="opciones">
+            <label for="ordenar">Ordenar por:</label>
+            <select id="ordenar">
+                <option value="relevant">Relevancia</option>
+                <option value="latest">Novedad</option>
+            </select>
             <label for="color">Color:</label>
             <select id="color">
                 <option value="black_and_white">blanco y negro</option>
@@ -32,6 +37,7 @@
                 <option value="teal">verde azulado</option>
                 <option value="blue">azul</option>
             </select>
+            <br>
             <label for="cantidadImagenes">Cantidad de Imágenes:</label>
             <select id="cantidadImagenes">
                 <option value="1">1</option>
@@ -45,7 +51,7 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
-            <label for="formatoImagen">Formato de la imagen:</label>
+            <label for="formatoImagen">Formato:</label>
             <select id="formatoImagen">
                 <option value="landscape">Horizontal</option>
                 <option value="squarish">Cuadrado</option>

@@ -7,6 +7,7 @@ const formato = document.querySelector('#formatoImagen');
 const fotoAleatoria = document.querySelector('#aleatorio');
 const mostrarMas = document.querySelector("#mostrar-mas");
 const color = document.querySelector("#color");
+const ordenar = document.querySelector("#ordenar");
 //Eventos
 busqueda.onclick = cargaImagenes;
 fotoAleatoria.onclick = cargaFotoAleatoria;
@@ -19,7 +20,7 @@ let mostrartipus = consulta.value;
 //función para llamar a la API y seleccionar imagenes específicas
 function carga() {
    
-    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&color=${color.value}&query=${consulta.value}&client_id=${codigo}`)
+    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&order_by=${ordenar.value}&color=${color.value}&query=${consulta.value}&client_id=${codigo}`)
         .then(response => { return response.json(); })
 
 
@@ -32,7 +33,7 @@ function carga() {
                     .then(statsResponse => statsResponse.json())
                     .then(statsData => {
                         let fechaCreacion = new Date(result.created_at);
-                        main.innerHTML += `<div class="card">
+                        main.innerHTML += `<div class="card w-25 col-4 m-auto">
                                             
                                                 <img src="${result.urls.small}" alt="${result.description}">
                                               <div class="card__content">
