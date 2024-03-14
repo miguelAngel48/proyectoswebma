@@ -4,10 +4,9 @@ const busqueda = document.querySelector('#busqueda');
 const consulta = document.querySelector('#query');
 const cantidadImagenes = document.querySelector('#cantidadImagenes');
 const formato = document.querySelector('#formatoImagen');
-
 const fotoAleatoria = document.querySelector('#aleatorio');
 const mostrarMas = document.querySelector("#mostrar-mas");
-
+const color = document.querySelector("#color");
 //Eventos
 busqueda.onclick = cargaImagenes;
 fotoAleatoria.onclick = cargaFotoAleatoria;
@@ -20,7 +19,7 @@ let mostrartipus = consulta.value;
 //función para llamar a la API y seleccionar imagenes específicas
 function carga() {
    
-    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&query=${consulta.value}&client_id=${codigo}`)
+    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&color=${color.value}&query=${consulta.value}&client_id=${codigo}`)
         .then(response => { return response.json(); })
 
 
