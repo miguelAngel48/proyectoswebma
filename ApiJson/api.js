@@ -19,8 +19,8 @@ let mostrartipus = consulta.value;
 
 //función para llamar a la API y seleccionar imagenes específicas
 function carga() {
-   
-    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}&orientation=${formato.value}&order_by=${ordenar.value}${color.value}&query=${consulta.value}&client_id=${codigo}`)
+
+    fetch(`https://api.unsplash.com/search/photos?page=${pagina}&per_page=${cantidadImagenes.value}${formato.value}&order_by=${ordenar.value}${color.value}&query=${consulta.value}&client_id=${codigo}`)
         .then(response => { return response.json(); })
 
 
@@ -28,7 +28,29 @@ function carga() {
             data.results.forEach(result => {
                 imagenesCargadas.push(result);
                 fetch(`https://api.unsplash.com/photos/${result.id}/statistics?client_id=${codigo}`)
-                    .then(statsResponse => statsResponse.json())
+                    .then(statsResponse => {
+                        if (statsResponse.status === 400) {
+                            alert("Error 400, la petición se ha sido erronea ");
+                            return;
+                        }
+                        if (statsResponse.status === 404) {
+                            alert("Error 404, no se han encotrado respuesta");
+                            return;
+                        }
+                        if (statsResponse.status === 403) {
+                            alert("Error 403, acceso restringido por una configuración incorrecta");
+                            return;
+                        }
+                        if (statsResponse.status === 401) {
+                            alert("Error 401, no se puede acceder a la información");
+                            return;
+                        }
+                        if (statsResponse.status === 500 || statsResponse.status === 503) {
+                            alert("Error 500, ha habido un error con el servidor");
+                            return;
+                        }
+                        return statsResponse.json();
+                    })
                     .then(statsData => {
                         let fechaCreacion = new Date(result.created_at);
                         main.innerHTML += `<div class="card col-xl-3 col-lg-4 col-md-6 mb-4">
@@ -49,9 +71,9 @@ function carga() {
             });
         })
         .catch(error => console.error('Error al cargar las imágenes:', error));
-        if(!consulta.value.length == "" ){
-    mostrarMas.style.display = "block";
-}
+    if (!consulta.value.length == "") {
+        mostrarMas.style.display = "block";
+    }
 
 }
 
@@ -89,7 +111,7 @@ function cargaFotoAleatoria() {
         })
         .catch(error => console.error('Error al cargar las imágenes aleatorias:', error));
 
-            mostrarMas.style.display = "block";       
+    mostrarMas.style.display = "block";
 }
 
 //Funcionalidad al boton Mostrar mas.
